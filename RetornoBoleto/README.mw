@@ -1,0 +1,31 @@
+# Implementação do Retorno Boleto com Strategy
+
+Este projeto apresenta uma implementação de leitura de arquivos de retorno de boletos utilizando o padrão de projeto Strategy. A ideia é criar uma estrutura flexível para lidar com diferentes formatos de retorno de boletos de diferentes bancos.
+
+## Estrutura do Projeto
+
+- `org.example`
+  - `LeituraRetorno`: Interface que define o contrato para as classes de leitura de retorno de boletos.
+  - `Boleto`: Classe que representa um boleto com suas informações.
+  - `LeituraRetornoBancoBrasil`: Implementação da leitura de retorno de boletos do Banco do Brasil.
+  - `LeituraRetornoBradesco`: Implementação da leitura de retorno de boletos do Bradesco.
+  
+## Funcionamento
+
+O projeto utiliza o padrão de projeto Strategy para permitir a implementação de diferentes estratégias de leitura de retorno de boletos. Cada banco tem sua própria classe de implementação que lida com o formato específico de retorno.
+
+### LeituraRetornoBancoBrasil
+
+A classe `LeituraRetornoBancoBrasil` lê um arquivo no formato específico do Banco do Brasil e extrai as informações dos boletos.
+
+### LeituraRetornoBradesco
+
+A classe `LeituraRetornoBradesco` é uma implementação inicial que cria uma lista vazia de boletos. Essa classe pode ser expandida para lidar com o formato de retorno do Bradesco.
+
+## Utilização
+
+Para utilizar as classes de leitura de retorno, siga os passos abaixo:
+
+1. Instancie a classe adequada para o banco desejado:
+   ```java
+   LeituraRetorno leituraRetorno = new LeituraRetornoBancoBrasil(); // ou LeituraRetornoBradesco
