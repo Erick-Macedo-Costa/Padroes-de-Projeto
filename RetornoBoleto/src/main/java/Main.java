@@ -15,5 +15,6 @@ public class Main {
         processarBoletos.processar(uriBB);
         System.out.println("------------------- BRADESCO -------------------");
         processarBoletosBradesco.processar(uriB);
+        //processarBoletos.setLeituraRetorno(new LeituraRetornoBradesco());
     }
 }
