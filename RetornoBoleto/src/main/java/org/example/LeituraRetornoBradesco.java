@@ -11,8 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeituraRetornoBradesco implements LeituraRetorno {
-    @Override
+public class LeituraRetornoBradesco  {
     public List<Boleto> lerArquivo(URI nomeArquivo) {
         var boletos = new ArrayList<Boleto>();
         try {
