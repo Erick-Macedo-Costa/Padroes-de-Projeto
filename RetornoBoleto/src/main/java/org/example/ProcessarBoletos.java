@@ -3,6 +3,7 @@ package org.example;
 import java.net.URI;
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class ProcessarBoletos {
 
@@ -13,7 +14,11 @@ public class ProcessarBoletos {
     }
 
     public void processar(URI nomeArquivo) {
-        leituraRetorno.lerArquivo(nomeArquivo);
+//        setLeituraRetorno(leituraRetorno);
+//        Predicate<Boleto> temMulta = b -> b.getMulta() > 0;
+//        var naoTemMulta = temMulta.negate();
+        var lista = leituraRetorno.apply(nomeArquivo);
+        lista.forEach(System.out::println);
     }
 
     public void setLeituraRetorno(Function<URI, List<Boleto>> leituraRetorno) {
