@@ -5,8 +5,6 @@ import java.net.URISyntaxException;
 
 public class Main {
     public static void main(String[] args) throws URISyntaxException {
-        var leiuraRetorno = new LeituraRetornoBancoBrasil();
-        var leituraRetornoBradesco = new LeituraRetornoBradesco();
         var processarBoletos = new ProcessarBoletos(leiuraRetorno);
         var processarBoletosBradesco = new ProcessarBoletos(leituraRetornoBradesco);
         var uriBB = Main.class.getResource("banco-brasil-1.csv").toURI();
