@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeituraRetornoBradesco  {
+public class LeituraRetornoBradesco  extends ProcessarBoletos{
     public static List<Boleto> lerArquivo(URI nomeArquivo) {
         var boletos = new ArrayList<Boleto>();
         try {
