@@ -12,12 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeituraRetornoBradesco  extends ProcessarBoletos{
-    public static List<Boleto> lerArquivo(URI nomeArquivo) {
-        var boletos = new ArrayList<Boleto>();
-        try {
-            var lista = Files.readAllLines(Paths.get(nomeArquivo));
-            for (var linha : lista) {
-                var vetor = linha.split(";");
+    @Override
+    Boleto processarLinha(String[] vetor) {
                 var boleto = new Boleto();
                 boleto.setId(Integer.parseInt(vetor[0]));
                 boleto.setCodBanco(vetor[1]);
@@ -29,14 +25,7 @@ public class LeituraRetornoBradesco  extends ProcessarBoletos{
                 boleto.setValor(Double.parseDouble(vetor[7]));
                 boleto.setJuros(Double.parseDouble(vetor[8]));
                 boleto.setMulta(Double.parseDouble(vetor[9]));
-                boletos.add(boleto);
-                System.out.println(boleto);
-            }
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
-        }
-
-        return boletos;
+        return boleto;
     }
 
 }
