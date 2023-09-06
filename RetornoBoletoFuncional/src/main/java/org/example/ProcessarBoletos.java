@@ -15,6 +15,8 @@ import java.util.function.Predicate;
 
 public abstract class ProcessarBoletos {
 
+    private Function<String[],Boleto>  processarLinha;
+
     public void processar(URI nomeArquivo) {
         var boletos = new ArrayList<Boleto>();
         try {
