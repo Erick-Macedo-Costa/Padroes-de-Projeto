@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeituraRetornoBradesco {
+    private LeituraRetornoBradesco() {
+        //Construtor privado que nao permite instanciar a classe.
+    }
     public static Boleto processarLinha(String[] vetor) {
                 var boleto = new Boleto();
                 boleto.setId(Integer.parseInt(vetor[0]));

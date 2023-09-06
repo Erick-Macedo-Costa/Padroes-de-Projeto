@@ -13,6 +13,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LeituraRetornoBancoBrasil {
+    private LeituraRetornoBancoBrasil() {
+        //Construtor privado que nao permite instanciar a classe.
+    }
 
     public static Boleto processarLinha(String[] vetor) {
                 var boleto = new Boleto();
