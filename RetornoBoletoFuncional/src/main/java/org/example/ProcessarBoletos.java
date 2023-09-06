@@ -23,7 +23,7 @@ public abstract class ProcessarBoletos {
             var lista = Files.readAllLines(Paths.get(nomeArquivo));
             for (var linha : lista) {
                 var vetor = linha.split(";");
-                var boleto = processarLinha(vetor);
+                var boleto = processarLinha.apply(vetor);
 
                 boletos.add(boleto);
                 System.out.println(boleto);
