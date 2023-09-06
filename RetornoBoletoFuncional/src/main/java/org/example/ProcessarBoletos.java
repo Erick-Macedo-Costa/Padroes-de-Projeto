@@ -21,6 +21,10 @@ public class ProcessarBoletos {
         this.processarLinha = processarLinha;
     }
 
+    public void setProcessarLinha(Function<String[], Boleto> processarLinha) {
+        this.processarLinha = processarLinha;
+    }
+
     public void processar(URI nomeArquivo) {
         var boletos = new ArrayList<Boleto>();
         try {
