@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeituraRetornoBradesco {
+public final class LeituraRetornoBradesco {
     private LeituraRetornoBradesco() {
         //Construtor privado que nao permite instanciar a classe.
     }

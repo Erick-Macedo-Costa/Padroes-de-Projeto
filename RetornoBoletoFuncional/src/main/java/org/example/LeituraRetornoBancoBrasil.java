@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LeituraRetornoBancoBrasil {
+public  class LeituraRetornoBancoBrasil {
     private LeituraRetornoBancoBrasil() {
         //Construtor privado que nao permite instanciar a classe.
     }
