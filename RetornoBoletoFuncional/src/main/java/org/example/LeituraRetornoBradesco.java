@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeituraRetornoBradesco  extends ProcessarBoletos{
-    @Override
     Boleto processarLinha(String[] vetor) {
                 var boleto = new Boleto();
                 boleto.setId(Integer.parseInt(vetor[0]));
