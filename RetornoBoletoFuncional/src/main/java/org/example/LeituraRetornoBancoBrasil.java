@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LeituraRetornoBancoBrasil extends ProcessarBoletos {
+public class LeituraRetornoBancoBrasil {
 
     Boleto processarLinha(String[] vetor) {
                 var boleto = new Boleto();

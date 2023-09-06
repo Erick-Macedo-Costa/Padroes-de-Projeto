@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeituraRetornoBradesco  extends ProcessarBoletos{
+public class LeituraRetornoBradesco {
     Boleto processarLinha(String[] vetor) {
                 var boleto = new Boleto();
                 boleto.setId(Integer.parseInt(vetor[0]));
