@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeituraRetornoBradesco {
-    public Boleto processarLinha(String[] vetor) {
+    public static Boleto processarLinha(String[] vetor) {
                 var boleto = new Boleto();
                 boleto.setId(Integer.parseInt(vetor[0]));
                 boleto.setCodBanco(vetor[1]);
