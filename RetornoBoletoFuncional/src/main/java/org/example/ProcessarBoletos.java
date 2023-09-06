@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public abstract class ProcessarBoletos {
+public class ProcessarBoletos {
 
     private Function<String[],Boleto>  processarLinha;
 
