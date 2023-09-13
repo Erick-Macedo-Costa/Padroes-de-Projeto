@@ -29,5 +29,4 @@ public final class LeituraRetornoBradesco {
                 boleto.setMulta(Double.parseDouble(vetor[9]));
         return boleto;
     }
-
 }

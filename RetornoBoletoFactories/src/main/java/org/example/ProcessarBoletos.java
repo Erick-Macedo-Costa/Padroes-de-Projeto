@@ -15,17 +15,9 @@ import java.util.function.Predicate;
 
 public class ProcessarBoletos {
 
-    private Function<String[],Boleto>  processarLinha;
-
-    public ProcessarBoletos(Function<String[], Boleto> processarLinha) {
-        this.processarLinha = processarLinha;
-    }
-
-    public void setProcessarLinha(Function<String[], Boleto> processarLinha) {
-        this.processarLinha = processarLinha;
-    }
 
     public void processar(URI nomeArquivo) {
+        Function<String[],Boleto>  processarLinha=newLerArquivoRetorno(nomeArquivo);
         var boletos = new ArrayList<Boleto>();
         try {
             var lista = Files.readAllLines(Paths.get(nomeArquivo));
@@ -43,5 +35,12 @@ public class ProcessarBoletos {
 
     }
 
+    private Function<String[],Boleto> newLerArquivoRetorno(URI nomeArquivo){
+        if (nomeArquivo.toString().contains("banco-brasil")) {
+            return LeituraRetornoBancoBrasil::processarLinha;
+        }
+            return LeituraRetornoBradesco::processarLinha;
+
+    }
 
 }
